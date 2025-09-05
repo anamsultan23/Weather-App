@@ -1,0 +1,104 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+  /* Enhanced background with gradient overlay */
+  background: linear-gradient(
+    135deg,
+    rgba(74, 144, 226, 0.8),
+    rgba(144, 224, 239, 0.8),
+    rgba(206, 236, 250, 0.8)
+  ), url('./assets/img1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  
+  /* Minimum height to ensure full viewport coverage */
+  min-height: 100vh;
+  
+  /* Add subtle animation to background */
+  animation: backgroundShift 20s ease-in-out infinite;
+}
+
+@keyframes backgroundShift {
+  0%, 100% {
+    background-position: center center;
+  }
+  50% {
+    background-position: center top;
+  }
+}
+
+/* Add some additional styling for better visual hierarchy */
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Scrollbar styling for webkit browsers */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* General button hover effects */
+.btn {
+  transition: all 0.3s ease !important;
+}
+
+/* Loading spinner enhancement */
+.spinner-border-sm {
+  animation: spin 0.75s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Focus styles for accessibility */
+button:focus,
+input:focus {
+  outline: 2px solid rgba(0, 123, 255, 0.5) !important;
+  outline-offset: 2px !important;
+}
+
+/* Disabled button styles */
+.btn:disabled {
+  opacity: 0.6 !important;
+  cursor: not-allowed !important;
+  transform: none !important;
+}
+
+/* Custom selection color */
+::selection {
+  background: rgba(0, 123, 255, 0.2);
+  color: #2c3e50;
+}
+
+::-moz-selection {
+  background: rgba(0, 123, 255, 0.2);
+  color: #2c3e50;
+}
